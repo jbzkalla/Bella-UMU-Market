@@ -1,0 +1,1232 @@
+/* Bella Market Design System */
+:root {
+    --primary: #7DAACB;
+    --bg: #f8fafc;
+    --accent: #CE2626;
+        --text: #333;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    --card-radius: 20px;
+    --btn-radius: 50px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Open Sans', 'Inter', sans-serif;
+    background-color: var(--bg) !important;
+    color: var(--text);
+}
+
+.product {
+    width: 240px;
+    height: 420px;
+    margin: 1%;
+    background: white;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: none;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border: none !important;
+    border-radius: var(--btn-radius) !important;
+    padding: 8px 20px !important;
+}
+
+.btn-accent {
+    background-color: var(--accent) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: var(--btn-radius) !important;
+    padding: 12px 30px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+/* Modern Premium Card Style */
+.bella-card {
+    background: #ffffff;
+    border-radius: var(--card-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    padding: 25px;
+    border: 1px solid rgba(125, 170, 203, 0.15);
+    margin-bottom: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+}
+
+.bella-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(125, 170, 203, 0.15);
+}
+
+/* Inner Comment/Detail Card from Image 1 */
+.comment-inner-card {
+    background: #FFFFFF;
+    border: 1.5px solid var(--accent);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(206, 38, 38, 0.08);
+    text-align: left;
+}
+
+/* Advanced Logo Styling from Image 3 */
+.bella-logo-wrapper {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1.5px);
+    background-size: 10px 10px;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.bella-logo-wrapper:hover {
+    filter: brightness(1.05);
+}
+
+.logo-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: -0.5px;
+    display: flex;
+    gap: 4px;
+}
+
+.logo-text .bella {
+    color: #FFFFFF;
+}
+
+.logo-text .market {
+    color: var(--accent);
+}
+
+/* Layout Utilities */
+.centered-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.section-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    color: var(--accent) !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+/* Footer Dotted Background */
+.footer-dotted {
+    background-color: var(--primary) !important;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1.5px, transparent 1.5px);
+    background-size: 15px 15px;
+    color: white;
+}
+
+/* FAQ Accordion Styles */
+.faq-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid rgba(125, 170, 203, 0.1);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 10px 25px rgba(125, 170, 203, 0.15);
+    transform: translateY(-2px);
+}
+
+.faq-header {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: background 0.3s ease;
+}
+
+.faq-header h4 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.faq-header i {
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fdfdfd;
+}
+
+.faq-content .inner {
+    padding: 20px 25px;
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.faq-item.active .faq-header {
+    background: rgba(125, 170, 203, 0.05);
+}
+
+.faq-item.active .faq-header h4 {
+    color: var(--primary);
+}
+
+.faq-item.active .faq-header i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-content {
+    max-height: 500px;
+    /* Adjust based on content */
+}
+
+/* Contact Page Layout */
+.contact-container {
+    display: flex;
+    gap: 30px;
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+.contact-info-card {
+    background-color: var(--primary);
+    color: white;
+    padding: 40px;
+    border-radius: var(--card-radius);
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.contact-form-container {
+    flex: 1.5;
+    min-width: 350px;
+    text-align: left;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-info-item i {
+    background: var(--accent);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control-modern {
+    border-radius: 10px !important;
+    border: 1px solid #ddd !important;
+    padding: 12px !important;
+    background: #fdfdfd !important;
+}
+
+.form-control-modern:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(125, 170, 203, 0.2) !important;
+}
+
+/* Rest of the original CSS */
+/*Community start*/
+
+.community {
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.post_input_div {
+    width: 40%;
+    margin-bottom: 5%;
+}
+
+.post_input {
+    width: 100%;
+    height: 100px;
+}
+
+.button_post {
+    border: none;
+    float: right;
+}
+
+.post_show {
+    width: 45%;
+    /*border: 1px solid #F8A036;*/
+    box-shadow: 2px 2px 5px orange;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5%;
+    height: auto;
+    /*background: linear-gradient(to top left, #33ccff 0%, #99ff66 100%);
+    background: #83F486;*/
+
+}
+
+.post_email {
+    margin-left: 5%;
+    color: green;
+    font-style: bold;
+    width: 100%;
+    text-shadow: 2px 2px 5px white;
+}
+
+.post_text {
+    margin-left: 15%;
+    margin-top: 0;
+    color: black;
+    font-style: bold;
+}
+
+.post_comment {
+    float: right;
+    width: 50%;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.button_comment {
+    float: right;
+    border: none;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .post_input_div {
+        width: 100%;
+        margin-left: -5%;
+    }
+
+    .post_show {
+        width: 100%;
+        margin-left: -5%;
+        margin-top: 50px;
+    }
+}
+
+/*FAQ PAGE START*/
+
+/* .faq { } */
+
+.faq h1 {
+    font-size: 55px;
+    font-family: Courier;
+    color: #F8A036;
+}
+
+.faq label {
+    font-size: 30px;
+}
+
+.faq h3 {
+    margin: 1%;
+    cursor: pointer;
+}
+
+.faq h3:hover {
+    color: blue;
+    opacity: 0.8;
+}
+
+.faq .overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 200px;
+    top: 30%;
+    left: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.faq #text {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@media only screen and(max-width: 770px) {
+    .faq .overlay {
+        width: 100%;
+        height: 500px;
+    }
+
+    .faq #text {
+        font-size: 20px;
+    }
+}
+
+
+/*FAQ PAGE END*/
+
+/*Navbar start*/
+
+.search_box {
+    width: 35%;
+    margin-left: 25%;
+}
+
+@media only screen and (max-width: 770px) {
+    .search_box {
+        width: 100%;
+        margin: auto;
+        z-index: 1;
+    }
+}
+
+/*Navbar End*/
+
+
+/* **************************Store Description start**********************/
+
+
+
+/* Three column layout */
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    margin-top: 10px;
+    float: left;
+    width: 70%;
+}
+
+/* Place text to the right */
+.right {
+    text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The bar container */
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.bar-5 {
+    width: 60%;
+    height: 18px;
+    background-color: #4CAF50;
+}
+
+.bar-4 {
+    width: 30%;
+    height: 18px;
+    background-color: #2196F3;
+}
+
+.bar-3 {
+    width: 10%;
+    height: 18px;
+    background-color: #00bcd4;
+}
+
+.bar-2 {
+    width: 4%;
+    height: 18px;
+    background-color: #ff9800;
+}
+
+.bar-1 {
+    width: 15%;
+    height: 18px;
+    background-color: #f44336;
+}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media only screen and(max-width: 770px) {
+
+    .side,
+    .middle {
+        width: 100%;
+    }
+
+    .right {
+        display: none;
+    }
+}
+
+
+
+/*********************store  Description End***********************/
+
+
+
+
+
+
+
+
+
+
+/**************Style for page Create new Store start*************************/
+
+.create_new_store {
+    margin: 150px;
+}
+
+.create_new_store h2 {
+    font-family: serif;
+
+}
+
+.create_new_store p {
+    font-size: 15px;
+}
+
+.create_new_store input {
+    padding: 1%;
+    margin: 1%;
+    width: 30%;
+    font-size: 20px;
+    border: 1px solid #002142;
+    border-radius: 10px;
+}
+
+.create_new_store button {
+    font-size: 15px;
+    background-color: #182938;
+    color: white;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    border-radius: 20px;
+}
+
+/**************Style for page Create new store end*************************/
+
+
+
+
+
+
+
+
+/**************Style for page About start*************************/
+
+/* .about_page { } */
+.about_page img {
+    height: 400px;
+    width: 100%;
+    border-bottom: 2px solid #A9A9A9;
+    margin-bottom: 3%;
+}
+
+.about_page p {
+    font-size: 25px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+/*************Style for page About End****************************/
+
+
+
+
+
+
+
+
+/****************Style for page Member Plane start*******************/
+
+.member_plan {
+    margin: 3%;
+}
+
+.member_plan h3 {
+    background-color: #182938;
+    color: white;
+    padding: 1.2%;
+    margin-bottom: 0;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 25px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.member_plan table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.member_plan th {
+    font-size: 30px;
+}
+
+.member_plan td,
+th {
+    font-size: 25px;
+    width: 30%;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.member_plan button {
+    background-color: #F7941E;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    margin: 1%;
+}
+
+@media only screen and (max-width: 768px) {
+    .member_plan h3 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .member_plan td {
+        font-size: 20px;
+    }
+
+}
+
+/****************Style for page Member Plane end********************/
+
+
+
+
+
+/**************Style for page Check Out Item start***************/
+
+.check_out_item {
+    margin: 7%;
+}
+
+
+.check_out_item p {
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    text-align: left;
+}
+
+.check_out_item img {
+    height: 100px;
+    width: 100px;
+    float: right;
+
+}
+
+
+.check_out_item table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.check_out_item th {
+    font-size: 20px;
+}
+
+.check_out_item td,
+th {
+    width: 20%;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.check_out_item_input {
+    width: 50%;
+}
+
+.check_out_item_continue {
+    background-color: #F7941E;
+    font-size: 17px;
+    width: 20%;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.check_out_item_proceed {
+    float: right;
+    border-bottom: 2px solid gray;
+    width: 35%;
+    margin-right: 5%;
+
+}
+
+.check_out_item_proceed button {
+    background-color: #F7941E;
+    font-size: 17px;
+    float: right;
+    width: 50%;
+    color: white;
+}
+
+/**************Style for page Check Out Item end****************/
+
+
+
+
+
+/*******************Style for page Sign Up start******************/
+
+
+.sign_up_form {
+    width: 40%;
+    margin: auto;
+    padding: 15px;
+}
+
+
+
+.sign_up_form_model_header {
+    font-size: 25px;
+    color: royalblue;
+}
+
+/* Set a style for all buttons */
+.sign_up_form button {
+    font-size: 15px;
+    background-color: #182938;
+    color: white;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+
+
+/* Add padding to container elements */
+.sign_up_container {
+    width: 100%;
+    margin: auto;
+    padding: 16px;
+    border: 1px solid #A9A9A9;
+    border-radius: 10px;
+}
+
+/* Premium Form Styling */
+.form-container-modern {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.form-input-modern {
+    width: 100%;
+    padding: 12px 16px !important;
+    margin: 10px 0 20px 0 !important;
+    border: 1.5px solid #eee !important;
+    border-radius: 12px !important;
+    background: #fff !important;
+    transition: all 0.3s ease !important;
+    font-size: 15px !important;
+}
+
+.form-input-modern:hover {
+    border-color: #ddd !important;
+}
+
+.form-input-modern:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 4px rgba(125, 170, 203, 0.15) !important;
+    outline: none !important;
+    background: #fff !important;
+}
+
+.form-label-modern {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 5px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.sign_up_container input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px !important;
+    margin: 8px 0 20px 0 !important;
+    border-radius: 10px !important;
+    border: 1px solid #ddd !important;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .sign_up_form {
+        width: 100%;
+    }
+
+    .sign_up_container input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"] {
+        width: 100%;
+    }
+
+    .sign_up_form button {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+
+/********************Style for page Sign Up end**********************/
+
+
+
+
+
+
+
+/****************Style for page Sign In start*****************/
+/*Sign in Form*/
+.sign_in_form {
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.sign_in_input {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.sign_in_form button {
+    font-size: 15px;
+    background-color: #182938;
+    color: white;
+    padding: 8px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+
+.forgot_psw {
+
+    color: red;
+}
+
+.sign_in_form h3 {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.sign_in_form h3:before,
+.sign_in_form h3:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: gray;
+}
+
+.sign_in_form h3:before {
+    margin-left: -50%;
+    text-align: right;
+}
+
+.color {
+    background-color: #ccc;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 770px) {
+    .forgot_psw {
+        display: block;
+        float: none;
+    }
+
+    .sign_in_input {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/******************Style for page Sign In end********************/
+
+
+
+
+
+
+/*********************Style for page index or Home start******************/
+
+/* jssor slider loading skin spin css */
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.jssorb053 .i {
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssorb053 .i .b {
+    fill: #fff;
+    fill-opacity: 0.5;
+}
+
+.jssorb053 .i:hover .b {
+    fill-opacity: .7;
+}
+
+.jssorb053 .iav .b {
+    fill-opacity: 1;
+}
+
+.jssorb053 .i.idn {
+    opacity: .3;
+}
+
+.jssora093 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.jssora093 .c {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 400;
+    stroke-miterlimit: 10;
+}
+
+.jssora093 .a {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 400;
+    stroke-miterlimit: 10;
+}
+
+.jssora093:hover {
+    opacity: .8;
+}
+
+.jssora093.jssora093dn {
+    opacity: .6;
+}
+
+.jssora093.jssora093ds {
+    opacity: .3;
+    pointer-events: none;
+}
+
+
+
+@import "lesshat";
+
+
+.star-ratings-css {
+    unicode-bidi: bidi-override;
+    color: yellow;
+    font-size: 25px;
+    height: 25px;
+    width: 100px;
+    margin: 0;
+    position: relative;
+    padding: 0;
+    text-shadow: 0px 1px 0 #a2a2a2;
+}
+
+/* Stuff for Pen styling */
+/* Moved to root or removed if redundant */
+/* em { font-style: italic; } */
+
+
+
+.product:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+/***********************Style for page index or Home end*********************/
+
+
+
+
+
+
+
+
+/*******************Style for page Complete Profile Seller start**********************/
+
+/* Full-width input fields */
+.complete_profile_seller input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #7100BD;
+    box-sizing: border-box;
+    width: 40%;
+    cursor: pointer;
+}
+
+.complete_profile_seller textarea {
+    margin: 8px 0;
+    padding-bottom: 15%;
+    width: 65%;
+    border: 1px solid #7100BD;
+}
+
+.profile_image {
+    height: 50%;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.document_image {
+    height: 50%;
+    width: 200px;
+}
+
+.store_banner_image {
+    height: 200px;
+    width: 500px;
+}
+
+.complete_profile_seller button {
+
+    font-size: 25px;
+    background-color: #182938;
+    /*#002142*/
+    color: white;
+    padding: 8px;
+    margin: 5% 0% 2% 40%;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 20px
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 770px) {
+    .complete_profile_seller input {
+        width: 100%;
+        margin: auto;
+        padding: auto;
+    }
+
+    .complete_profile_seller button {
+        width: 100%;
+        margin: 0 0 5%;
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .complete_profile_seller textarea {
+        width: 100%;
+    }
+
+    .store_banner_image {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+/***************Style for page Complete Profile Seller end***************/
+
+
+
+
+
+
+/****************Style for page Complete Profile Buyer start**************/
+.complete_profile_buyer_form {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 38%;
+}
+
+/* Full-width input fields */
+.complete_profile_buyer_form input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 40%;
+    cursor: pointer;
+}
+
+.complete_profile_buyer_button {
+
+    font-size: 15px;
+    background-color: #182938;
+    color: white;
+    padding: 8px;
+    margin: 0 45%;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 5%;
+}
+
+.complete_profile_buyer_button:hover {
+    opacity: 0.5;
+}
+
+/****************Style for page Complete Profile Buyer end***************/
+
+
+
+
+
+
+/*************Scroll Bar Style start*****************/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0.44, rgb(122, 153, 217)),
+            color-stop(0.72, rgb(73, 125, 189)),
+            color-stop(0.86, rgb(28, 58, 148)));
+}
+
+/***************Scroll Bar Style end***************/
+
+
+/***********Footer part***************/
+.footer {
+
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    color: white;
+    background-color: #222222;
+    clear: left;
+    text-align: center;
+}
